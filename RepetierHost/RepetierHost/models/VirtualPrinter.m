@@ -73,9 +73,10 @@
         if (ana->bedTemp > 20 && bedTemp > ana->bedTemp) bedTemp = ana->bedTemp;
         if (bedTemp < 20) bedTemp = 20;
         for(int e=0;e<3;e++) {
-            if(extruderTemp[e]!=[ana getExtruderTemperature:e]);
-            extruderTemp[e] += ([ana getExtruderTemperature:e] - extruderTemp[e]>0? 1 : -1);
-            if ([ana getExtruderTemperature:e] > 20 && extruderTemp[e] > [ana getExtruderTemperature:e]) extruderTemp[e] = [ana getExtruderTemperature:e];
+            if(extruderTemp[e]!=[ana getExtruderTemperature:e])
+                extruderTemp[e] += ([ana getExtruderTemperature:e] - extruderTemp[e]>0? 1 : -1);
+            if ([ana getExtruderTemperature:e] > 20 && extruderTemp[e] > [ana getExtruderTemperature:e])
+                extruderTemp[e] = [ana getExtruderTemperature:e];
             if (extruderTemp[e] < 20) extruderTemp[e] = 20;
         }
     }

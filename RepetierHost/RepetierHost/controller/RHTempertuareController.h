@@ -56,4 +56,5 @@
 - (IBAction)monitorExtruder2Action:(id)sender;
 - (IBAction)monitorHeatedBedAction:(id)sender;
 - (IBAction)setAverageAction:(NSMenuItem *)sender;
+- (IBAction)selectPeriod:(NSMenuItem *)sender;
 @end

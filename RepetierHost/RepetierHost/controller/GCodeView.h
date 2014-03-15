@@ -121,9 +121,7 @@
 -(void)deleteSelectionRedraw:(BOOL)redraw;
 -(NSString*)getSelection;
 -(void)insertString:(NSString*)s;
--(void)insertChar:(NSString*)c;
 -(BOOL)hasSelection;
--(void)positionCursor;
 -(void)backspace;
 -(void)deleteChar;
 -(void)updateHelp;
