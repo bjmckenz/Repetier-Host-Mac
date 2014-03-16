@@ -36,7 +36,7 @@
 		FD283A8114E6B55000597203 /* trash.png in Resources */ = {isa = PBXBuildFile; fileRef = FD283A7C14E6B55000597203 /* trash.png */; };
 		FD283A8214E6B55000597203 /* zoom.png in Resources */ = {isa = PBXBuildFile; fileRef = FD283A7D14E6B55000597203 /* zoom.png */; };
 		FD283A8514E6B61900597203 /* rotateicon.png in Resources */ = {isa = PBXBuildFile; fileRef = FD283A8414E6B61900597203 /* rotateicon.png */; };
-		FD283A8814E6C43A00597203 /* HorizontalSpliViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD283A8714E6C43A00597203 /* HorizontalSpliViewDelegate.m */; };
+		FD283A8814E6C43A00597203 /* HorizontalSplitViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD283A8714E6C43A00597203 /* HorizontalSplitViewDelegate.m */; };
 		FD283A8B14E97ED100597203 /* preferences.png in Resources */ = {isa = PBXBuildFile; fileRef = FD283A8914E97ED100597203 /* preferences.png */; };
 		FD283A8C14E97ED100597203 /* printersettings.png in Resources */ = {isa = PBXBuildFile; fileRef = FD283A8A14E97ED100597203 /* printersettings.png */; };
 		FD283A8E14EAB8CA00597203 /* SDCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD283A8D14EAB8CA00597203 /* SDCard.xib */; };
@@ -75,7 +75,7 @@
 		FD74DBB814CAF7E000422BFE /* VirtualPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD74DBB714CAF7E000422BFE /* VirtualPrinter.m */; };
 		FD74DBBC14CC593200422BFE /* pauseicon.png in Resources */ = {isa = PBXBuildFile; fileRef = FD74DBBA14CC593200422BFE /* pauseicon.png */; };
 		FD74DBBD14CC593200422BFE /* previewoff.png in Resources */ = {isa = PBXBuildFile; fileRef = FD74DBBB14CC593200422BFE /* previewoff.png */; };
-		FD74DBC114CC727C00422BFE /* EnableToollbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FD74DBC014CC727C00422BFE /* EnableToollbarItem.m */; };
+		FD74DBC114CC727C00422BFE /* EnableToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FD74DBC014CC727C00422BFE /* EnableToolbarItem.m */; };
 		FD74DBC414D06AE300422BFE /* EEPROMParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD74DBC314D06AE300422BFE /* EEPROMParameter.m */; };
 		FD74DBC814D1C83F00422BFE /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD74DBC714D1C83F00422BFE /* Preferences.xib */; };
 		FD74DBCB14D1CD7400422BFE /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = FD74DBCA14D1CD7300422BFE /* Preferences.m */; };
@@ -93,7 +93,7 @@
 		FD98D9E814BCEF710079AB43 /* RHActionTabDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD98D9E714BCEF710079AB43 /* RHActionTabDelegate.m */; };
 		FDAC195616B04CFC00479AA4 /* ClickableTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAC195516B04CFC00479AA4 /* ClickableTextField.m */; };
 		FDB2C67314914C7E00276479 /* TemperatureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDB2C67214914C7E00276479 /* TemperatureView.xib */; };
-		FDB2C67614926E6500276479 /* RHTempertuareController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB2C67514926E6500276479 /* RHTempertuareController.m */; };
+		FDB2C67614926E6500276479 /* RHTemperatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB2C67514926E6500276479 /* RHTemperatureController.m */; };
 		FDB2C67914927CA900276479 /* RHLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB2C67814927CA900276479 /* RHLogView.m */; };
 		FDB2C67D1493CC9300276479 /* LogSplitViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB2C67C1493CC9300276479 /* LogSplitViewDelegate.m */; };
 		FDB2C67F1494A9BA00276479 /* ManualControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDB2C67E1494A9BA00276479 /* ManualControl.xib */; };
@@ -202,8 +202,8 @@
 		FD283A7C14E6B55000597203 /* trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash.png; sourceTree = "<group>"; };
 		FD283A7D14E6B55000597203 /* zoom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zoom.png; sourceTree = "<group>"; };
 		FD283A8414E6B61900597203 /* rotateicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotateicon.png; sourceTree = "<group>"; };
-		FD283A8614E6C43A00597203 /* HorizontalSpliViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalSpliViewDelegate.h; sourceTree = "<group>"; };
-		FD283A8714E6C43A00597203 /* HorizontalSpliViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalSpliViewDelegate.m; sourceTree = "<group>"; };
+		FD283A8614E6C43A00597203 /* HorizontalSplitViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalSplitViewDelegate.h; sourceTree = "<group>"; };
+		FD283A8714E6C43A00597203 /* HorizontalSplitViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalSplitViewDelegate.m; sourceTree = "<group>"; };
 		FD283A8914E97ED100597203 /* preferences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferences.png; sourceTree = "<group>"; };
 		FD283A8A14E97ED100597203 /* printersettings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = printersettings.png; sourceTree = "<group>"; };
 		FD283A8D14EAB8CA00597203 /* SDCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDCard.xib; sourceTree = "<group>"; };
@@ -257,8 +257,8 @@
 		FD74DBB714CAF7E000422BFE /* VirtualPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirtualPrinter.m; sourceTree = "<group>"; };
 		FD74DBBA14CC593200422BFE /* pauseicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pauseicon.png; sourceTree = "<group>"; };
 		FD74DBBB14CC593200422BFE /* previewoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previewoff.png; sourceTree = "<group>"; };
-		FD74DBBF14CC727C00422BFE /* EnableToollbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnableToollbarItem.h; sourceTree = "<group>"; };
-		FD74DBC014CC727C00422BFE /* EnableToollbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnableToollbarItem.m; sourceTree = "<group>"; };
+		FD74DBBF14CC727C00422BFE /* EnableToolbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnableToolbarItem.h; sourceTree = "<group>"; };
+		FD74DBC014CC727C00422BFE /* EnableToolbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnableToolbarItem.m; sourceTree = "<group>"; };
 		FD74DBC214D06AE200422BFE /* EEPROMParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EEPROMParameter.h; sourceTree = "<group>"; };
 		FD74DBC314D06AE300422BFE /* EEPROMParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EEPROMParameter.m; sourceTree = "<group>"; };
 		FD74DBC714D1C83F00422BFE /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
@@ -289,8 +289,8 @@
 		FDAC195416B04CFC00479AA4 /* ClickableTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickableTextField.h; sourceTree = "<group>"; };
 		FDAC195516B04CFC00479AA4 /* ClickableTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickableTextField.m; sourceTree = "<group>"; };
 		FDB2C67214914C7E00276479 /* TemperatureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemperatureView.xib; sourceTree = "<group>"; };
-		FDB2C67414926E6500276479 /* RHTempertuareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHTempertuareController.h; sourceTree = "<group>"; };
-		FDB2C67514926E6500276479 /* RHTempertuareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHTempertuareController.m; sourceTree = "<group>"; };
+		FDB2C67414926E6500276479 /* RHTemperatureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHTemperatureController.h; sourceTree = "<group>"; };
+		FDB2C67514926E6500276479 /* RHTemperatureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHTemperatureController.m; sourceTree = "<group>"; };
 		FDB2C67714927CA900276479 /* RHLogView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHLogView.h; sourceTree = "<group>"; };
 		FDB2C67814927CA900276479 /* RHLogView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHLogView.m; sourceTree = "<group>"; };
 		FDB2C67B1493CC9300276479 /* LogSplitViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogSplitViewDelegate.h; sourceTree = "<group>"; };
@@ -406,8 +406,8 @@
 		FD74DBBE14CC724800422BFE /* controls */ = {
 			isa = PBXGroup;
 			children = (
-				FD74DBBF14CC727C00422BFE /* EnableToollbarItem.h */,
-				FD74DBC014CC727C00422BFE /* EnableToollbarItem.m */,
+				FD74DBBF14CC727C00422BFE /* EnableToolbarItem.h */,
+				FD74DBC014CC727C00422BFE /* EnableToolbarItem.m */,
 				FD283A9214EAC4ED00597203 /* FlippedNSView.h */,
 				FD283A9314EAC4ED00597203 /* FlippedNSView.m */,
 				FD283A9914EFB10D00597203 /* HistoryTextField.h */,
@@ -430,8 +430,8 @@
 			children = (
 				FDB2C67B1493CC9300276479 /* LogSplitViewDelegate.h */,
 				FDB2C67C1493CC9300276479 /* LogSplitViewDelegate.m */,
-				FD283A8614E6C43A00597203 /* HorizontalSpliViewDelegate.h */,
-				FD283A8714E6C43A00597203 /* HorizontalSpliViewDelegate.m */,
+				FD283A8614E6C43A00597203 /* HorizontalSplitViewDelegate.h */,
+				FD283A8714E6C43A00597203 /* HorizontalSplitViewDelegate.m */,
 			);
 			name = delegates;
 			sourceTree = "<group>";
@@ -593,14 +593,14 @@
 				FDEDF7D0148A0EEF00E6CFF1 /* ThreeDView.m */,
 				FDEDF7FD148A279C00E6CFF1 /* PrinterSettingsController.h */,
 				FDEDF7FE148A279C00E6CFF1 /* PrinterSettingsController.m */,
-				FDB2C67414926E6500276479 /* RHTempertuareController.h */,
+				FDB2C67414926E6500276479 /* RHTemperatureController.h */,
 				FD74DBC914D1CD7300422BFE /* Preferences.h */,
 				FD74DBCA14D1CD7300422BFE /* Preferences.m */,
 				FD6E2F7414C2446700F57498 /* EEPROMController.h */,
 				FD283A8F14EABBB900597203 /* SDCardManager.h */,
 				FD283A9014EABBB900597203 /* SDCardManager.m */,
 				FD6E2F7514C2446700F57498 /* EEPROMController.m */,
-				FDB2C67514926E6500276479 /* RHTempertuareController.m */,
+				FDB2C67514926E6500276479 /* RHTemperatureController.m */,
 				FD13BF7A14C1756D0007E33D /* STLComposer.h */,
 				FD9447BA15D82C6100AFE7F1 /* RHSlicer.h */,
 				FD9447BB15D82C6100AFE7F1 /* RHSlicer.m */,
@@ -885,7 +885,7 @@
 				FD1719D3148E83540023E262 /* GCode.m in Sources */,
 				FD1719D6148EA3040023E262 /* GCodeAnalyzer.m in Sources */,
 				FD1719D9148EAD850023E262 /* RHPrintjob.m in Sources */,
-				FDB2C67614926E6500276479 /* RHTempertuareController.m in Sources */,
+				FDB2C67614926E6500276479 /* RHTemperatureController.m in Sources */,
 				FDB2C67914927CA900276479 /* RHLogView.m in Sources */,
 				FDB2C67D1493CC9300276479 /* LogSplitViewDelegate.m in Sources */,
 				FDB2C6821494AD1600276479 /* RHManualControl.m in Sources */,
@@ -905,7 +905,7 @@
 				FD13BF7C14C1756D0007E33D /* STLComposer.m in Sources */,
 				FD6E2F7614C2446700F57498 /* EEPROMController.m in Sources */,
 				FD74DBB814CAF7E000422BFE /* VirtualPrinter.m in Sources */,
-				FD74DBC114CC727C00422BFE /* EnableToollbarItem.m in Sources */,
+				FD74DBC114CC727C00422BFE /* EnableToolbarItem.m in Sources */,
 				FD74DBC414D06AE300422BFE /* EEPROMParameter.m in Sources */,
 				FD74DBCB14D1CD7400422BFE /* Preferences.m in Sources */,
 				FD92675214D42F37005B31FF /* DefaultsExtension.m in Sources */,
@@ -916,7 +916,7 @@
 				FD28663C14DD8E1A0081750D /* RHFileHistory.m in Sources */,
 				FD28664214DE7A130081750D /* TemperatureHistory.m in Sources */,
 				FD28664514DE8CFB0081750D /* TemperatureView.m in Sources */,
-				FD283A8814E6C43A00597203 /* HorizontalSpliViewDelegate.m in Sources */,
+				FD283A8814E6C43A00597203 /* HorizontalSplitViewDelegate.m in Sources */,
 				FD283A9114EABBBA00597203 /* SDCardManager.m in Sources */,
 				FD283A9414EAC4ED00597203 /* FlippedNSView.m in Sources */,
 				FD283A9B14EFB10D00597203 /* HistoryTextField.m in Sources */,

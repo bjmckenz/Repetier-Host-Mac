@@ -20,9 +20,9 @@
 #import "Preferences.h"
 #import "RHFileHistory.h"
 #import "SDCardManager.h"
-#import "EnableToollbarItem.h"
+#import "EnableToolbarItem.h"
 #import "LogSplitViewDelegate.h"
-#import "HorizontalSpliViewDelegate.h"
+#import "HorizontalSplitViewDelegate.h"
 #import "models/Slicer.h"
 
 @class ThreeDContainer;
@@ -35,7 +35,7 @@
 @class Slicer;
 @class Slic3rConfig;
 @class STLComposer;
-@class RHTempertuareController;
+@class RHTemperatureController;
 @class RHManualControl;
 @class RHSlicer;
 
@@ -100,10 +100,10 @@
     IBOutlet NSTabViewItem *threedViewTabItem;
     IBOutlet NSTabViewItem *temperatureTabItem;
     IBOutlet NSTextView *firstStepsText;
-    IBOutlet RHTempertuareController *temperatureController;
+    IBOutlet RHTemperatureController *temperatureController;
     IBOutlet NSMenu *mainMenu;
     IBOutlet NSMenuItem *slicerMenu;
-    IBOutlet EnableToollbarItem *emergencyButton;
+    IBOutlet EnableToolbarItem *emergencyButton;
     IBOutlet NSPanel *pausedPanel;
     IBOutlet NSTextField *pausedPanelText;
     NSButton *pausedPanelContinue;

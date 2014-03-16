@@ -163,7 +163,7 @@
         case 205: // EEPROM Settings
             [output addLast:@"EPR:2 75 76800 Baudrate"];
             [output addLast:@"EPR:2 79 0 Max. inactive time [ms,0=off]" ];
-            [output addLast:@"EPR:2 83 60000 Stop stepper afer inactivity [ms,0=off]"];
+            [output addLast:@"EPR:2 83 60000 Stop stepper after inactivity [ms,0=off]"];
             [output addLast:@"EPR:3 3 40.00 X-axis steps per mm"];
             [output addLast:@"EPR:3 7 40.00 Y-axis steps per mm"];
             [output addLast:@"EPR:3 11 3333.59 Z-axis steps per mm"];

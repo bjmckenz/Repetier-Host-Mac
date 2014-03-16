@@ -21,8 +21,8 @@
 @interface TemperatureView : NSView {
     @public
     TemperatureHistory *hist;
-    double righttime;
-    double lefttime;
+    double rightTime;
+    double leftTime;
     double timeScale;
     double tempY0,tempScale;
     double outScale;

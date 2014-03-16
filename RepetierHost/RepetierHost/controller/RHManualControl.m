@@ -41,7 +41,7 @@
             [self updateConnectionStatus:NO];
             [self scrollPoint:NSMakePoint(0,0)];
             lastx = lasty = lastz = -1000;
-            dontsend = FALSE;
+            dontSend = FALSE;
             [self updateExtruderCount];
             status=disconnected;
             statusSet=CFAbsoluteTimeGetCurrent();
@@ -225,46 +225,46 @@
     [self updateConnectionStatus:NO];
 }
 - (void)fanspeedChanged:(NSNotification *)notification {
-    dontsend = TRUE;
+    dontSend = TRUE;
     [fanSpeedSlider setIntValue:[notification.object intValue]*100/255];
     [self updatePrinterState];
-    dontsend = FALSE;
+    dontSend = FALSE;
 }
 - (void)speedMultiplyChanged2:(NSNotification *)notification {
     int tval = [notification.object intValue];
     int nv = [speedMultiplySlider intValue];
     if(nv!=tval) {
-        dontsend = TRUE;
+        dontSend = TRUE;
         connection->speedMultiply = tval;
         [speedMultiplySlider setIntValue:tval];
         [speedMultiplyLabel setStringValue:[NSString stringWithFormat:@"%d%%",tval]];
-        dontsend = FALSE;
+        dontSend = FALSE;
     }
 }
 - (void)flowMultiplyChanged2:(NSNotification *)notification {
     int tval = [notification.object intValue];
     int nv = [flowMultiplySlider intValue];
     if(nv!=tval) {
-        dontsend = TRUE;
+        dontSend = TRUE;
         connection->flowMultiply = tval;
         [flowMultiplySlider setIntValue:tval];
         [flowMultiplyLabel setStringValue:[NSString stringWithFormat:@"%d%%",tval]];
-        dontsend = FALSE;
+        dontSend = FALSE;
     }
 }
 - (void)targetExtrChanged:(NSNotification *)notification {
-    dontsend = TRUE;
+    dontSend = TRUE;
     [self updatePrinterState];
-    dontsend = FALSE;
+    dontSend = FALSE;
 }
 - (void)targetBedChanged:(NSNotification *)notification {
-    dontsend = TRUE;
+    dontSend = TRUE;
     [self updatePrinterState];
-    dontsend = FALSE;    
+    dontSend = FALSE;    
 }
 -(void)updateExtruderCount {
     if(connection->config->numberOfExtruder==activeExtruderSelector.itemArray.count) return;
-    dontsend = YES;
+    dontSend = YES;
     int sidx = connection->analyzer->activeExtruder->extruderId;
     NSMutableArray *exlist = [NSMutableArray new];
     int n = connection->config->numberOfExtruder,i;
@@ -275,7 +275,7 @@
     [activeExtruderSelector addItemsWithTitles:exlist];
     if(sidx<n)
         [activeExtruderSelector selectItemAtIndex:sidx];
-    dontsend = NO;
+    dontSend = NO;
     [exlist release];
 }
 -(void)updatePrinterState {
@@ -286,10 +286,10 @@
     [extruderOnButton setState:[a getExtruderTemperature:-1]];
     [heatedBedOnButton setState:a->bedTemp>0];
     [fanOnButton setState:a->fanOn];
-    dontsend = YES;
+    dontSend = YES;
     if(connection->analyzer!=nil && connection->analyzer->activeExtruder!=nil)
         [activeExtruderSelector selectItemAtIndex:connection->analyzer->activeExtruder->extruderId];
-    dontsend = NO;
+    dontSend = NO;
     NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
     if(a->fanOn) 
         [d setInteger:(int)((double)a->fanVoltage/2.55) forKey:@"fanSpeed"];
@@ -311,7 +311,7 @@
 }
 
 - (IBAction)extruderChangeAction:(id)sender {
-    if(dontsend) return;
+    if(dontSend) return;
     [connection injectManualCommand:[NSString stringWithFormat:@"T%d",(int)[activeExtruderSelector indexOfSelectedItem]]];
 }
 - (IBAction)debugEchoAction:(NSButton *)sender {
@@ -331,7 +331,7 @@
 }
 
 - (IBAction)speedMultiplyChanged:(id)sender {
-    if(dontsend) return;
+    if(dontSend) return;
     int nv = [speedMultiplySlider intValue];
     if(nv!=connection->speedMultiply) {
         connection->speedMultiply = nv;
@@ -341,7 +341,7 @@
 }
 
 - (IBAction)flowMultiplyChanged:(id)sender {
-    if(dontsend) return;
+    if(dontSend) return;
     int nv = [flowMultiplySlider intValue];
     if(nv!=connection->flowMultiply) {
         connection->flowMultiply = nv;
@@ -497,7 +497,7 @@
 }
 
 - (IBAction)heatOnAction:(NSButton *)sender {
-    if (connection->connected == false || dontsend) return;
+    if (connection->connected == false || dontSend) return;
     //if (!createCommands) return;
     [connection getInjectLock];
     if (sender.state)
@@ -512,7 +512,7 @@
 }
 
 - (IBAction)extruderSetTempAction:(NSButton *)sender {
-    if(dontsend) return;
+    if(dontSend) return;
     [connection injectManualCommand:[NSString stringWithFormat:@"M104 S%d",(int)extruderTempText.intValue]];
 }
 
@@ -527,7 +527,7 @@
 }
 
 - (IBAction)heatedBedOnAction:(NSButton *)sender {
-    if (connection->connected == false || dontsend) return;
+    if (connection->connected == false || dontSend) return;
     //if (!createCommands) return;
     [connection getInjectLock];
     if (sender.state)
@@ -542,12 +542,12 @@
 }
 
 - (IBAction)heatedBedSetTempAction:(NSButton *)sender {
-    if(dontsend) return;
+    if(dontSend) return;
     [connection injectManualCommand:[NSString stringWithFormat:@"M140 S%d",(int)heatedBedTempText.intValue]];
 }
 
 - (IBAction)fanOnAction:(NSButton *)sender {
-    if (connection->connected == false || dontsend) return;   
+    if (connection->connected == false || dontSend) return;   
     //if (!createCommands) return;
     [connection getInjectLock];
     if (sender.state)

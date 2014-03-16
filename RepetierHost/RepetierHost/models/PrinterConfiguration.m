@@ -201,7 +201,7 @@
         else printerType = 0;
         [d removeObjectForKey:[self.b stringByAppendingString:@".hasDumpArea"]];
         [d setInteger:printerType forKey:[self.b stringByAppendingString:@".printerType"]];
-    } else printerType = [d integerForKey:[self.b stringByAppendingString:@".printerType"]];
+    } else printerType = (int)[d integerForKey:[self.b stringByAppendingString:@".printerType"]];
     dumpAreaLeft = [d doubleForKey:[self.b stringByAppendingString:@".dumpAreaLeft"]];
     dumpAreaFront = [d doubleForKey:[self.b stringByAppendingString:@".dumpAreaFront"]];
     dumpAreaWidth = [d doubleForKey:[self.b stringByAppendingString:@".dumpAreaWidth"]];

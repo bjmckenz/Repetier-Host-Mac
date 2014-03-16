@@ -17,7 +17,7 @@
 #import <Foundation/Foundation.h>
 #import "RHLinkedList.h"
 
-@interface TempertureEntry : NSObject {
+@interface TemperatureEntry : NSObject {
 @public
     double time;
     // values <-1000 are not present 
@@ -60,7 +60,7 @@
     BOOL showTarget;
     BOOL showAverage;
     double xpos;
-    BOOL autoscoll;
+    BOOL autoscroll;
     TemperatureList *history;
     TemperatureList *hourHistory;
     RHLinkedList *lists;

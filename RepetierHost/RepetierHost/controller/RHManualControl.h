@@ -70,7 +70,7 @@ typedef enum printerStatus {disconnected,idle,heatingExtruder,heatingBed,motorSt
     IBOutlet NSSlider *speedMultiplySlider;
     IBOutlet NSSlider *flowMultiplySlider;
     IBOutlet NSTextField *speedMultiplyLabel;
-    BOOL dontsend;
+    BOOL dontSend;
     IBOutlet NSTextField *flowMultiplyLabel;
     IBOutlet NSTextField *statusLabel;
     IBOutlet NSPopUpButton *activeExtruderSelector;

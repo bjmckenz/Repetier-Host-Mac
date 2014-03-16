@@ -16,6 +16,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EnableToollbarItem : NSToolbarItem
+@interface EnableToolbarItem : NSToolbarItem
 
 @end

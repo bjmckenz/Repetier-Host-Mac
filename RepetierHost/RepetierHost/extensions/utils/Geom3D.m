@@ -78,7 +78,7 @@
     return [plane autorelease];
 }
 /// <summary>
-/// Inersection of plane with line
+/// Intersection of plane with line
 /// </summary>
 /// <param name="line"></param>
 /// <param name="inter"></param>

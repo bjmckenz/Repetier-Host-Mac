@@ -319,7 +319,7 @@
     if(!fileExists)
         exe = slic3rInternalPath;
     NSArray *arr;
-    int version = [d integerForKey:@"slic3rVersionGroup"];
+    int version = (int)[d integerForKey:@"slic3rVersionGroup"];
     if(version == 1)
         arr = [NSArray arrayWithObjects:@"--no-plater",@"--gui-mode",@"expert",nil];
     else
@@ -420,8 +420,8 @@
     }
     NSUserDefaults *d = NSUserDefaults.standardUserDefaults;
     NSString *exe = [d stringForKey:@"slic3rExternalPath"];
-    BOOL bundeled = [d boolForKey:@"slic3rInternalBundled"];
-    if(bundeled) {
+    BOOL bundled = [d boolForKey:@"slic3rInternalBundled"];
+    if(bundled) {
         exe = slic3rInternalPath;
     }
     BOOL isDir;  

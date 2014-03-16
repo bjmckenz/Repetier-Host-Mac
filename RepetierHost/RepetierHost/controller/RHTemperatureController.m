@@ -15,12 +15,12 @@
  */
 
 
-#import "RHTempertuareController.h"
+#import "RHTemperatureController.h"
 #import "PrinterConnection.h"
 #import "RHAppDelegate.h"
 #import "TemperatureHistory.h"
 
-@implementation RHTempertuareController
+@implementation RHTemperatureController
 
 - (id)initWithFrame:(NSRect)frame
 {
@@ -29,7 +29,7 @@
     {
         [_view setFrame:[self bounds]];
         [self addSubview:_view];
-        tempertureView->hist = connection->tempHistory;
+        temperatureView->hist = connection->tempHistory;
         [[NSNotificationCenter defaultCenter] addObserver:self                                             selector:@selector(connectionChanged:) name:@"RHConnectionOpen" object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self                                             selector:@selector(connectionChanged:) name:@"RHConnectionClosed" object:nil];
 
@@ -41,7 +41,7 @@
     NSUserDefaults *d = NSUserDefaults.standardUserDefaults;
     [d addObserver:self forKeyPath:@"tempZoomLevel" options:NSKeyValueObservingOptionNew context:NULL];
     [d addObserver:self forKeyPath:@"tempAverageSeconds" options:NSKeyValueObservingOptionNew context:NULL];
-    [tempertureView->hist initMenu];
+    [temperatureView->hist initMenu];
     [self updateCheckmarks];
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath
@@ -53,7 +53,7 @@
     [self refresh];
 }
 -(void)refresh {
-    [tempertureView setNeedsDisplay:YES];
+    [temperatureView setNeedsDisplay:YES];
 }
 -(void)updateCheckmarks {
     NSUserDefaults *d = NSUserDefaults.standardUserDefaults;
@@ -101,8 +101,8 @@
 }
 - (IBAction)selectPeriod:(NSMenuItem *)sender {
     int p = (int)(sender.tag);
-    tempertureView->hist->currentHistory = [tempertureView->hist->lists objectAtIndex:p];
-    [tempertureView setNeedsDisplay:YES];
+    temperatureView->hist->currentHistory = [temperatureView->hist->lists objectAtIndex:p];
+    [temperatureView setNeedsDisplay:YES];
 }
 - (IBAction)monitorDisableAction:(id)sender {
     if(connection->connected)

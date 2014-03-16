@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "HorizontalSpliViewDelegate.h"
+#import "HorizontalSplitViewDelegate.h"
 
 @implementation HorizontalSplitViewDelegate
 @synthesize leftView;
