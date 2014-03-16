@@ -1132,7 +1132,7 @@
     e->col = cstart;
     s = [StringUtil normalizeLineends:s];
     NSArray *la = [s componentsSeparatedByString:@"\n"]; // Array with text to insert
-    GCodeShort *l = [lines objectAtIndex:e->row]; // Row at curosr position
+    GCodeShort *l = [lines objectAtIndex:e->row]; // Row at cursor position
     if (e->col > l.length) e->col = (int)l.length;
     //NSMutableArray *la2 = [[NSMutableArray alloc] initWithCapacity:la.count-1];
     //[la2 insertObject:[[l substringToIndex:e->col] stringByAppendingString:[la objectAtIndex:0]] atIndex:0];

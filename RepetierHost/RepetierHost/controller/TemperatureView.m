@@ -64,7 +64,7 @@ static double timeTickSizes[] = {1800,900,600,300,60,30,15,5,1};
     NSPoint p = theEvent.locationInWindow;
     p = [self convertPoint:p fromView:nil];
     float dx = p.x-down.x;
-    float delta = 100*dx*(righttime-lefttime)/(axisWidth*3600);
+    float delta = 100*dx*(rightTime-leftTime)/(axisWidth*3600);
     hist->xpos -=delta;
     if(hist->xpos<0) hist->xpos = 0;
     if(hist->xpos>100) hist->xpos = 100;    
@@ -77,8 +77,8 @@ static double timeTickSizes[] = {1800,900,600,300,60,30,15,5,1};
     NSGraphicsContext* theContext = [NSGraphicsContext currentContext];
     [theContext saveGraphicsState];
     [hist->gridColor set];
-    double x = timeTick*(floor(lefttime/timeTick));
-    while(x<lefttime) x+=timeTick;
+    double x = timeTick*(floor(leftTime/timeTick));
+    while(x<leftTime) x+=timeTick;
     NSBezierPath *p = [NSBezierPath bezierPath];
     NSBezierPath *axis = [NSBezierPath bezierPath];
     float ybot = rect.origin.y;
@@ -87,8 +87,8 @@ static double timeTickSizes[] = {1800,900,600,300,60,30,15,5,1};
     axisWidth = NSWidth(rect);
     float xright = rect.origin.x+axisWidth;
     [fontAttributes setObject:hist->fontColor forKey:NSForegroundColorAttributeName];
-    for(;x<righttime;x+=timeTick) {
-        float xp = xleft+(x-lefttime)*timeScale;
+    for(;x<rightTime;x+=timeTick) {
+        float xp = xleft+(x-leftTime)*timeScale;
         [p moveToPoint:NSMakePoint(xp, ybot)];
         [p lineToPoint:NSMakePoint(xp, ytop)];
         [axis moveToPoint:NSMakePoint(xp,ybot)];
@@ -155,8 +155,8 @@ static double timeTickSizes[] = {1800,900,600,300,60,30,15,5,1};
             if(hist->showTarget)
                 pTarBed = [NSBezierPath bezierPath];
         }
-        for(TempertureEntry *e in hist->currentHistory->entries) {
-            float xp = xleft+(e->time-lefttime)*timeScale;
+        for(TemperatureEntry *e in hist->currentHistory->entries) {
+            float xp = xleft+(e->time-leftTime)*timeScale;
             if(pExt && e->extruder>=0) {
                 if(pExt.isEmpty)
                     [pExt moveToPoint:NSMakePoint(xp, ybot+(e->extruder-minTemp)*tempScale)];
@@ -193,7 +193,7 @@ static double timeTickSizes[] = {1800,900,600,300,60,30,15,5,1};
                 else
                     [pTarBed lineToPoint:NSMakePoint(xp, ybot+(e->targetBed-minTemp)*tempScale)];
             }
-            if(e->time>righttime) break;
+            if(e->time>rightTime) break;
         }
         // Draw temperatures
         if(pTarExt) {
@@ -234,9 +234,9 @@ static double timeTickSizes[] = {1800,900,600,300,60,30,15,5,1};
             pAvgOut = [NSBezierPath bezierPath];
 
         float xp=0;
-        for(TempertureEntry *e in hist->currentHistory->entries) {
-            if(e->time<lefttime-1) continue;
-            xp = xleft+(e->time-lefttime)*timeScale;
+        for(TemperatureEntry *e in hist->currentHistory->entries) {
+            if(e->time<leftTime-1) continue;
+            xp = xleft+(e->time-leftTime)*timeScale;
             if(pOut && e->output>=0) {
                 float yp=(float)e->output/255*(ytop-ybot)+ybot;
                 if(pOut.isEmpty) {
@@ -253,7 +253,7 @@ static double timeTickSizes[] = {1800,900,600,300,60,30,15,5,1};
                 else
                     [pAvgOut lineToPoint:NSMakePoint(xp, yp)];
             }
-            if(e->time>righttime) break;
+            if(e->time>rightTime) break;
         }
         if(!pOut.isEmpty) {
             [pOut lineToPoint:NSMakePoint(xp, ybot)];
@@ -285,16 +285,16 @@ static double timeTickSizes[] = {1800,900,600,300,60,30,15,5,1};
     [hist->backgroundColor set];
     [NSBezierPath fillRect:bounds];
     double timespan = [[hist->zoomLevel objectAtIndex:hist->currentZoomLevel] doubleValue];
-    if(hist->autoscoll)
+    if(hist->autoscroll)
         hist->xpos = 100.0;
-    righttime = (hist->currentHistory->maxTime)-(3600-timespan)*0.01*(100.0-hist->xpos);
-    lefttime = righttime-timespan;
+    rightTime = (hist->currentHistory->maxTime)-(3600-timespan)*0.01*(100.0-hist->xpos);
+    leftTime = rightTime-timespan;
     NSRect outputRect,tempRect;
     minTemp = 0;maxTemp = 300;
     BOOL hasTemp = NO;
 #define INCLUDETEMP(a) {if(a>=0) {if(!hasTemp) {minTemp = maxTemp = a;hasTemp=YES;} else {minTemp=MIN(a,minTemp);maxTemp=MAX(a,maxTemp);}}}
-    for(TempertureEntry *e in hist->currentHistory->entries) {
-        if(e->time<lefttime || e->time>righttime) continue;
+    for(TemperatureEntry *e in hist->currentHistory->entries) {
+        if(e->time<leftTime || e->time>rightTime) continue;
         if(hist->showExtruder) {
             INCLUDETEMP(e->extruder);
             if(hist->showAverage)

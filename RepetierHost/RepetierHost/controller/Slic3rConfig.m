@@ -122,7 +122,7 @@
         }
         current = [self findByName:[d stringForKey:@"slic3rCurrent"]];
         if(current)
-            [current toCurrent]; // Fill in paremeter values
+            [current toCurrent]; // Fill in parameter values
         [configTable reloadData];
         for(NSString *key in [Slic3rSettings configNames]) {
             NSString *kname = [NSString stringWithFormat:@"slic3r#current#%@",key];

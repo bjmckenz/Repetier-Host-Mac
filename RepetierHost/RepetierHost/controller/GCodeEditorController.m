@@ -28,7 +28,7 @@
 
 @synthesize variableKeys;
 
-#pragma mark Initalization
+#pragma mark Initialization
 
 - (id)initWithFrame:(NSRect)frame
 {

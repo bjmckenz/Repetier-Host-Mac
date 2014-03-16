@@ -328,7 +328,7 @@
                                                                     <rect key="frame" x="10" y="33" width="382" height="249"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <customView id="1252" customClass="RHTempertuareController">
+                                                                        <customView id="1252" customClass="RHTemperatureController">
                                                                             <rect key="frame" x="-3" y="0.0" width="388" height="249"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         </customView>
@@ -495,7 +495,7 @@
                                     <button verticalHuggingPriority="750" id="1030">
                                         <rect key="frame" x="671" y="122" width="83" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundRect" title="Clear Log" bezelStyle="roundedRect" image="4DC57B9E-A4E0-4F96-BF0A-3296425B124E" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" inset="2" id="1031">
+                                        <buttonCell key="cell" type="roundRect" title="Clear Log" bezelStyle="roundedRect" image="BECCBD0A-0E0C-4509-8777-025A5EA7FA84" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" inset="2" id="1031">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="smallSystem"/>
                                         </buttonCell>
@@ -640,17 +640,17 @@
                             <action selector="toolConnect:" target="839" id="1021"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="F13DE5C4-1692-4219-999C-E376B3CB8BAC" explicitItemIdentifier="toolRunJob" label="Run job" paletteLabel="Run job" tag="2" image="runjob32" id="866" customClass="EnableToollbarItem">
+                    <toolbarItem implicitItemIdentifier="F13DE5C4-1692-4219-999C-E376B3CB8BAC" explicitItemIdentifier="toolRunJob" label="Run job" paletteLabel="Run job" tag="2" image="runjob32" id="866" customClass="EnableToolbarItem">
                         <connections>
                             <action selector="runJobAction:" target="839" id="1062"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="B92458B3-B540-40BC-93E3-1564FA1CF9DF" explicitItemIdentifier="toolKillJob" label="Kill job" paletteLabel="Kill job" tag="3" image="killjob32" id="865" customClass="EnableToollbarItem">
+                    <toolbarItem implicitItemIdentifier="B92458B3-B540-40BC-93E3-1564FA1CF9DF" explicitItemIdentifier="toolKillJob" label="Kill job" paletteLabel="Kill job" tag="3" image="killjob32" id="865" customClass="EnableToolbarItem">
                         <connections>
                             <action selector="killJobAction:" target="839" id="1063"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="3569D9E9-2F76-4499-8070-BBA9657CB667" explicitItemIdentifier="toolSDCard" label="SD card" paletteLabel="SD card" tag="4" image="sdcardicon" id="864" customClass="EnableToollbarItem">
+                    <toolbarItem implicitItemIdentifier="3569D9E9-2F76-4499-8070-BBA9657CB667" explicitItemIdentifier="toolSDCard" label="SD card" paletteLabel="SD card" tag="4" image="sdcardicon" id="864" customClass="EnableToolbarItem">
                         <connections>
                             <action selector="sdCardAction:" target="839" id="1065"/>
                         </connections>
@@ -680,7 +680,7 @@
                             <action selector="showPreferences:" target="839" id="1330"/>
                         </connections>
                     </toolbarItem>
-                    <toolbarItem implicitItemIdentifier="376815C4-135C-4DFD-8990-C5BF4D6142E1" label="Emergency Stop" paletteLabel="Emergency Stop" tag="-1" image="emergencystop" id="1336" customClass="EnableToollbarItem">
+                    <toolbarItem implicitItemIdentifier="376815C4-135C-4DFD-8990-C5BF4D6142E1" label="Emergency Stop" paletteLabel="Emergency Stop" tag="-1" image="emergencystop" id="1336" customClass="EnableToolbarItem">
                         <connections>
                             <action selector="emergencyAction:" target="839" id="1338"/>
                         </connections>
@@ -987,7 +987,7 @@ DQ
         </window>
     </objects>
     <resources>
-        <image name="4DC57B9E-A4E0-4F96-BF0A-3296425B124E" width="1" height="1">
+        <image name="BECCBD0A-0E0C-4509-8777-025A5EA7FA84" width="1" height="1">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

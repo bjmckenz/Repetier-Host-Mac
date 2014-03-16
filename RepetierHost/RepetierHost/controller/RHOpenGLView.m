@@ -231,7 +231,7 @@
     
     
   //  return;
-  //  NSLog(@"Opengl paint");
+  //  NSLog(@"OpenGL paint");
     double starttime = CFAbsoluteTimeGetCurrent();
     if([glContext view]!=self)
         [glContext setView:self];

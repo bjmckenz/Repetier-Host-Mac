@@ -17,9 +17,9 @@
 #import "TemperatureHistory.h"
 #import "DefaultsExtension.h"
 #import "RHAppDelegate.h"
-#import "RHTempertuareController.h"
+#import "RHTemperatureController.h"
 
-@implementation TempertureEntry
+@implementation TemperatureEntry
 
 -(id)initWithExtruder:(float)ext bed:(float)_bed targetBed:(float)tar targetExtruder:(float)tare {
     if((self=[super init])) {
@@ -140,7 +140,7 @@
     showExtruder = [d boolForKey:@"tempShowExtruder"];
     showAverage = [d boolForKey:@"tempShowAverage"];
     showBed = [d boolForKey:@"tempShowBed"];
-    autoscoll = [d boolForKey:@"tempAutoscroll"];
+    autoscroll = [d boolForKey:@"tempAutoscroll"];
     showOutput = [d boolForKey:@"tempShowOutput"];
     showTarget = [d boolForKey:@"tempShowTarget"];
     extruderWidth = [d doubleForKey:@"tempExtruderWidth"];
@@ -180,20 +180,20 @@
     [item release];
 }
 -(void)addNotify:(NSNotification*)event {
-    TempertureEntry * ent = event.object;
+    TemperatureEntry * ent = event.object;
     [history->entries addLast:ent];
     // Remove old entries
     double time = CFAbsoluteTimeGetCurrent();
     long ltime = (long)time;
     long lhour = ltime / 3600;
     double mintime = time-3600;
-    while(((TempertureEntry*)(history->entries.peekFirstFast))->time<mintime)
+    while(((TemperatureEntry*)(history->entries.peekFirstFast))->time<mintime)
         [history->entries removeFirst];
     // Create average values
     int nExtruder = 0,nBed = 0,nOut = 0;
     float sumExtruder = 0,sumBed = 0,sumOutput = 0;
     mintime = CFAbsoluteTimeGetCurrent()-avgPeriod;
-    for(TempertureEntry *e in history->entries) {
+    for(TemperatureEntry *e in history->entries) {
         if(e->time<mintime) continue;
         if(e->extruder>-1000) {
             nExtruder++;

@@ -87,7 +87,7 @@
     <Description>Sets target temperature for the chamber and returns immediately.</Description>
   </Command>
   <Command name="M116" title="Wait">
-    <Description>Wait until target tempertures for extruder and heated bed are reached.</Description>
+    <Description>Wait until target temperatures for extruder and heated bed are reached.</Description>
   </Command>
   <Command name="M114" title="Get current position">
     <Description>Returns the current position to the host.</Description>

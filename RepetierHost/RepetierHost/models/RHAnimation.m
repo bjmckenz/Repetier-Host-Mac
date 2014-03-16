@@ -22,7 +22,7 @@
 @implementation ModelAnimation
 
 /// <summary>
-/// Base class for animations. Animations are used to modify the appeareance
+/// Base class for animations. Animations are used to modify the appearance
 /// of the underlying content. E.g. it could pulse an object.
 /// </summary>
 -(id)initWithName:(NSString *)n

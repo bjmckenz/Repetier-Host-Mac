@@ -242,7 +242,7 @@
             else binaryVersion = config->protocol - 1;
 
             [self getInjectLock ];
-            [self injectManualCommand:@"N0 M110" ]; // Make sure we tal about the same linenumbers
+            [self injectManualCommand:@"N0 M110" ]; // Make sure we talk about the same linenumbers
             [self injectManualCommand:@"M115"]; // Check firmware
             [self injectManualCommand:@"M105"]; // Read temperature
             [self injectManualCommand:@"M111 S6"]; // Read temperature
@@ -293,7 +293,7 @@
     if(connected) {
         bool heaterOn = analyzer.isAnyExtruderEnabled;
         if(analyzer->bedTemp>20) heaterOn = YES;
-        if(heaterOn) { // Warning about temperture left on
+        if(heaterOn) { // Warning about temperature left on
             [app showHeaterRunning];
             return NO;
         }
@@ -966,7 +966,7 @@
     }
     if ([StringUtil string:res startsWith:@"MTEMP:"]) // Temperature monitor 
     {
-        level = RHLogResponse; // this happens to often to log. Temperture monitor i sthe log
+        level = RHLogResponse; // this happens to often to log. Temperature monitor is the log
         NSArray *sl = [StringUtil explode:[res substringFromIndex:6] sep:@" "];
         if (sl.count == 4)
         {
@@ -978,7 +978,7 @@
             {
                 [temperatureDelegate monitoredTemperatureAt:time temp:temp target:target output:output];
             }
-            TempertureEntry *te = [[TempertureEntry alloc] initWithMonitor:analyzer->tempMonitor temp:temp output:output targetBed:analyzer->bedTemp targetExtruder:[analyzer  getExtruderTemperature:-1]];
+            TemperatureEntry *te = [[TemperatureEntry alloc] initWithMonitor:analyzer->tempMonitor temp:temp output:output targetBed:analyzer->bedTemp targetExtruder:[analyzer  getExtruderTemperature:-1]];
             [ThreadedNotification notifyASAP:@"RHTempMonitor" object:te];
             [te release];
 
@@ -996,7 +996,7 @@
     {
         level = RHLogInfo;
         lastline = 0;
-        [self injectManualCommandFirst:@"N0 M110" ]; // Make sure we tal about the same
+        [self injectManualCommandFirst:@"N0 M110" ]; // Make sure we talk about the same
         [job killJob]; // continuing the old job makes no sense, better save the plastic
         resendNode = nil;
         sdcardMounted = YES;
@@ -1015,7 +1015,7 @@
         if(temperatureDelegate != nil)
             [temperatureDelegate receivedTemperature:[self getExtruderTemperature:-1] bed:bedTemp];
         [ThreadedNotification notifyASAP:@"RHTemperatureRead" object:nil];
-        TempertureEntry *te = [[TempertureEntry alloc] initWithExtruder:[self getExtruderTemperature:-1] bed:bedTemp targetBed:analyzer->bedTemp targetExtruder:[analyzer getExtruderTemperature:-1]];
+        TemperatureEntry *te = [[TemperatureEntry alloc] initWithExtruder:[self getExtruderTemperature:-1] bed:bedTemp targetBed:analyzer->bedTemp targetExtruder:[analyzer getExtruderTemperature:-1]];
         if(extruderOutput>=0)
             te->output = [self getExtruderOutput:-1] ;
         [ThreadedNotification notifyASAP:@"RHTempMonitor" object:te];

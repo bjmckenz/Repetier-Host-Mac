@@ -14,9 +14,9 @@
  limitations under the License.
  */
 
-#import "EnableToollbarItem.h"
+#import "EnableToolbarItem.h"
 
-@implementation EnableToollbarItem
+@implementation EnableToolbarItem
 -(BOOL)validateToolbarItem:(NSToolbarItem *)toolbarItem {
     return [toolbarItem tag]!=0;
 }

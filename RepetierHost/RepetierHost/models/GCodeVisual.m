@@ -251,7 +251,7 @@ BOOL correctNormals = true;
     float w = h * wfac;
     BOOL fixedH = conf3d->useLayerHeight;
     float dfac = (float)(M_PI * conf3d->filamentDiameter * conf3d->filamentDiameter * 0.25 / wfac);
-    // nv = number vertices around circumsphere of filament
+    // nv = number vertices around circumference of filament
     int nv = 8 * (method - 1), i;
     if (method == 1) nv = 4;
     if (method == 0) nv = 1;
@@ -904,7 +904,7 @@ BOOL correctNormals = true;
     //double start = CFAbsoluteTimeGetCurrent();
     if (clear)
         [self clear];
-    /* Old algortithm
+    /* Old algorithm
     NSArray *la = [text componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     for (NSString *s in la)
     {

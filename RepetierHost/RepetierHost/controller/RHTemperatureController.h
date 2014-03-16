@@ -18,10 +18,10 @@
 #import <Foundation/Foundation.h>
 #import "TemperatureView.h"
 
-@interface RHTempertuareController : NSView {
+@interface RHTemperatureController : NSView {
     @public
      IBOutlet NSView *_view;
-    IBOutlet TemperatureView *tempertureView;
+    IBOutlet TemperatureView *temperatureView;
     IBOutlet NSMenuItem *timerperiod60;
     IBOutlet NSMenuItem *timeperiod30;
     IBOutlet NSMenuItem *timeperiod15;

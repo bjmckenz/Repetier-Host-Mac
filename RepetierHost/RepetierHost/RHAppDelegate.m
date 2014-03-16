@@ -43,7 +43,7 @@
 
 @synthesize window;
 
-#pragma mark Initalization related
+#pragma mark Initialization related
 
 -(id)init {
     if((self=[super init])) {

@@ -214,7 +214,7 @@
         
         // Sometimes, anchors end up displaced from the optimal position
         // due to irregular sizes of the subrects.
-        // So, try to adjut it up & left as much as possible.
+        // So, try to adjust it up & left as much as possible.
         int x,y;
         for (x = 1; x <= r->x; x++)
             if (![self isFree:[PackerRect rectWithX:r->x-x y:r->y w:r->w h:r->h object:r->object]])
