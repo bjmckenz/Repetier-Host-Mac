@@ -265,7 +265,7 @@
 -(void)updateExtruderCount {
     if(connection->config->numberOfExtruder==activeExtruderSelector.itemArray.count) return;
     dontsend = YES;
-    int sidx = connection->analyzer->activeExtruder;
+    int sidx = connection->analyzer->activeExtruder->extruderId;
     NSMutableArray *exlist = [NSMutableArray new];
     int n = connection->config->numberOfExtruder,i;
     for(i=0;i<n;i++) {

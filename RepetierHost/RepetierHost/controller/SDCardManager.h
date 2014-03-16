@@ -81,7 +81,6 @@
 - (IBAction)uplCancelAction:(id)sender;
 - (IBAction)newFolderAction:(id)sender;
 - (IBAction)cancelNewFolder:(id)sender;
-- (IBAction)uplCancelAction:(id)sender;
 - (IBAction)createNewFolder:(id)sender;
 -(void)timerTick:(NSTimer*)timer;
 -(void)refreshFilenames;
