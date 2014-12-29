@@ -567,8 +567,20 @@
         }        
     }];
 }
--(BOOL)upload:(int)source {
-    if(![self validFilename:uplFilenameText.stringValue]) return NO;
+- (BOOL)upload:(int)source {
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression
+                                  regularExpressionWithPattern:@"[a-z0-9_()-]{1,8}([.][a-z0-9_()-]{1,3})?$"
+                                  options:0
+                                  error:&error];
+    NSRange filenameLoc = [regex rangeOfFirstMatchInString:uplFilenameText.stringValue
+                                                   options:0
+                                                     range:NSMakeRange(0, [[uplFilenameText stringValue] length])];
+    if (NSEqualRanges(filenameLoc, NSMakeRange(NSNotFound, 0)))
+    {
+        [self showErrorUpload:@"Target name is not a valid 8.3 filename. Only 0-9, a-z and _ are allowed." headline:@"Invalid target filename"];
+        return NO;
+    }
     RHPrintjob *job = connection->job;
     [printStatus setStringValue:@"Uploading file ..."];
     [progressBar setIndeterminate:NO];

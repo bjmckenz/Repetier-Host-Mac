@@ -1995,18 +1995,18 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>EnableToollbarItem</string>
+					<string>EnableToolbarItem</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>EnableToollbarItem</string>
+					<string>EnableToolbarItem</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>EnableToollbarItem</string>
+					<string>EnableToolbarItem</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>EnableToollbarItem</string>
+					<string>EnableToolbarItem</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>EnableToollbarItem</string>
+					<string>EnableToolbarItem</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>EnableToollbarItem</string>
+					<string>EnableToolbarItem</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2049,7 +2049,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>EnableToollbarItem</string>
+					<string>EnableToolbarItem</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2080,11 +2080,11 @@
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBPartialClassDescription">
-					<string key="className">EnableToollbarItem</string>
+					<string key="className">EnableToolbarItem</string>
 					<string key="superclassName">NSToolbarItem</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/EnableToollbarItem.h</string>
+						<string key="minorKey">./Classes/EnableToolbarItem.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
