@@ -8,7 +8,7 @@ xcuserdata
 *.dmg
 RepetierHost/RepetierHost/images/Thumbs.db
 Repetier-Host Mac.app/*
-
+*.xccheckout
 Repetier-Host Mac iRapid.pmdoc/*
 NeueVersionBereitstellen.txt
 
